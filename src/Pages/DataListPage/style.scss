@@ -1,0 +1,114 @@
+@import "../../styles/colors";
+
+.data-list {
+  .bread-crumb {
+    display: flex;
+
+    p {
+      color: $color-N500;
+      margin-right: 3px;
+
+      &.active {
+        color: black;
+      }
+    }
+  }
+
+  h2 {
+    margin-top: 25px;
+    margin-bottom: 35px;
+  }
+
+  .filter-wrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    .field-wrap {
+      margin-right: 15px;
+    }
+  }
+
+  .table {
+    .table-header {
+      display: flex;
+
+      .header-item-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 20%;
+        height: 50px;
+        padding: 0 8px;
+        background-color: $color-N300;
+        border-right: 1px solid $color-N500;
+        cursor: pointer;
+
+        .chevron-icon {
+          width: 15px;
+
+          &.ascend {
+            transform: rotate(180deg);
+          }
+        }
+
+        &:last-child {
+          border-right: none;
+        }
+
+        &.active, &:hover {
+          background-color: $color-N500;
+          color: $color-N300;
+        }
+      }
+    }
+
+    .table-body {
+      height: 65vh;
+      overflow-y: auto;
+
+      .table-row-wrap {
+        display: flex;
+
+        .table-item-wrap {
+          width: 20%;
+          height: 70px;
+          display: inline-block;
+          padding: 20px 8px 5px 8px;
+          border-bottom: 1px solid $color-N500;
+          word-wrap: break-word;
+        }
+      }
+    }
+    
+    .pagination-wrap {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+
+      .pagination-item {
+        display: grid;
+        place-items: center;
+        border: 1px solid $color-N500;
+        width: 25px;
+        height: 25px;
+        margin-right: 8px;
+        cursor: pointer;
+        color: $color-N500;
+
+        &.active, &:hover {
+          color: black;
+          border: 1px solid black;
+        }
+      }
+
+      &.disabled {
+        .pagination-item {
+          color: $color-N200;
+          border: 1px solid $color-N200;
+          cursor: no-drop;
+        }
+      }
+    }
+  }
+}
